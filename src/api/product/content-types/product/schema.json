@@ -12,13 +12,59 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "name": {
+    "title": {
       "type": "string",
       "required": true,
       "maxLength": 77,
       "minLength": 3
     },
+    "slug": {
+      "type": "uid",
+      "required": true,
+      "minLength": 3,
+      "maxLength": 110
+    },
+    "description": {
+      "type": "text"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "t-shirt",
+        "mug",
+        "hoodie",
+        "shirt"
+      ],
+      "default": "t-shirt,",
+      "required": true
+    },
+    "size": {
+      "type": "string",
+      "maxLength": 70
+    },
+    "color": {
+      "type": "enumeration",
+      "enum": [
+        "red",
+        "blue",
+        "green",
+        "yellow"
+      ],
+      "required": true
+    },
     "price": {
+      "type": "integer",
+      "required": true
+    },
+    "availableQty": {
       "type": "integer",
       "required": true
     }
