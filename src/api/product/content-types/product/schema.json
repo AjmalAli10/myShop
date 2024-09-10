@@ -43,7 +43,7 @@
         "hoodie",
         "shirt"
       ],
-      "default": "t-shirt,",
+
       "required": true
     },
     "size": {
